@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PkS-5r-qT0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Jy-ng-WMT">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--My App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TextEditor" id="BYZ-38-t0r" customClass="TextEditorViewController" customModule="TextView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                     <navigationItem key="navigationItem" title="My App" id="NFH-vY-m2i">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="bfj-Kd-GUQ">
                             <connections>
-                                <action selector="settingsPressed:" destination="BYZ-38-t0r" id="WYp-5G-zjq"/>
+                                <action selector="goToSettings:" destination="BYZ-38-t0r" id="Rqf-9m-XsK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="4"/>
+            <point key="canvasLocation" x="1788.5496183206105" y="3.5211267605633805"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="I9N-Yt-e5M">
@@ -84,7 +84,7 @@
                                                                 <segment title="Light"/>
                                                             </segments>
                                                             <connections>
-                                                                <action selector="saveColor:" destination="8dA-U6-C73" eventType="valueChanged" id="Tir-ZD-fu6"/>
+                                                                <action selector="saveColor:" destination="8dA-U6-C73" eventType="valueChanged" id="us7-XU-3bp"/>
                                                             </connections>
                                                         </segmentedControl>
                                                     </subviews>
@@ -120,7 +120,7 @@
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grr-pw-drc">
                                                             <rect key="frame" x="272" y="0.0" width="51" height="31"/>
                                                             <connections>
-                                                                <action selector="saveEditable:" destination="8dA-U6-C73" eventType="valueChanged" id="qXO-37-MmV"/>
+                                                                <action selector="saveEditable:" destination="8dA-U6-C73" eventType="valueChanged" id="YbL-Ns-tae"/>
                                                             </connections>
                                                         </switch>
                                                     </subviews>
@@ -152,7 +152,7 @@
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FMU-ac-Nlp">
                                                             <rect key="frame" x="272" y="0.0" width="51" height="31"/>
                                                             <connections>
-                                                                <action selector="saveCorrection:" destination="8dA-U6-C73" eventType="valueChanged" id="1Pg-PH-5QE"/>
+                                                                <action selector="saveCorrection:" destination="8dA-U6-C73" eventType="valueChanged" id="MX9-bf-oQ8"/>
                                                             </connections>
                                                         </switch>
                                                     </subviews>
@@ -182,25 +182,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzt-tc-BAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592" y="4"/>
+            <point key="canvasLocation" x="2518.320610687023" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="4J6-vZ-OZi">
+        <scene sceneID="ZCR-GN-7Qu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PkS-5r-qT0" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Jy-ng-WMT" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pnw-5X-GqG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aGb-Nu-WSJ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1LQ-NN-Eu2"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="azq-kH-PNb"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o2d-RX-S5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AEf-bs-ltk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1034" y="4"/>
         </scene>
     </scenes>
     <resources>

@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
-
+    
     @IBOutlet weak var controlColors: UISegmentedControl!
     @IBOutlet weak var controlEditable: UISwitch!
     @IBOutlet weak var controlCorrection: UISwitch!
@@ -30,35 +30,18 @@ class SettingsViewController: UITableViewController {
     }
     
     @IBAction func saveColor(_ sender: UISegmentedControl) {
-        let current = controlColors.selectedSegmentIndex
+        let current = sender.selectedSegmentIndex
         defaultValues.set(current, forKey: "color")
     }
     
     @IBAction func saveEditable(_ sender: UISwitch) {
-        let current = controlEditable.isOn
+        let current = sender.isOn
         defaultValues.set(current, forKey: "editable")
     }
     
     @IBAction func saveCorrection(_ sender: UISwitch) {
-        let current = controlCorrection.isOn
+        let current = sender.isOn
         defaultValues.set(current, forKey: "correction")
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 2
-        default:
-            return 0
-        }
-    }
-
+    
 }

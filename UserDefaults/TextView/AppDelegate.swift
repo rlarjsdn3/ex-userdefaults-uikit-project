@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let list: [String: Any] = ["color": 0, "editable": true, "correction": true]
         let defaultValues = UserDefaults.standard
+        // ⭐️ 최초 앱 실행 시, UserDefaults에 저장될 기본값을 직접 부여함.
         defaultValues.register(defaults: list)
         return true
     }
